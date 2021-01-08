@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Bevy web template</title>
+        <style>
+            body {
+                background-color: #000;
+                margin: auto;
+
+                /* disable touch panning/zooming */
+                touch-action: none;
+            }
+        </style>
+    </head>
+    <script type="module">
+        import init from './lib/wasm.js'
+        init()
+    </script>
+</html>

@@ -1,0 +1,17 @@
+[tasks.build]
+command = "cargo"
+args = ["build", "--target", "wasm32-unknown-unknown", "--release"]
+
+[tasks.wasm-bindgen]
+command = "wasm-bindgen"
+args = ["--out-dir",  "lib", "--out-name", "wasm", "--target", "web", "--no-typescript", "target/wasm32-unknown-unknown/release/${CARGO_MAKE_PROJECT_NAME}.wasm"]
+dependencies = ["build"]
+
+[tasks.web]
+dependencies = ["wasm-bindgen"]
+
+[tasks.run]
+command = "basic-http-server"
+args = ["-x"]
+dependencies = ["web"]
+

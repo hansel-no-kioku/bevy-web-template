@@ -1,1 +1,2 @@
-# bevy-web-template
+# Bevy web template
+

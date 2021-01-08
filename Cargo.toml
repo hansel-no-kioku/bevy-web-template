@@ -1,0 +1,18 @@
+[package]
+name = "bevy-web-template"
+version = "0.1.0"
+authors = ["hansel-no-kioku <hansel-no-kioku@users.noreply.github.com>"]
+edition = "2018"
+
+[features]
+default = [
+  "bevy/bevy_gltf",
+  "bevy/bevy_winit",
+  "bevy/render",
+  "bevy/png"
+]
+
+[dependencies]
+bevy = {version="0.4", default-features=false}
+bevy_webgl2 = "0.4.2"
+
