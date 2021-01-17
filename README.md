@@ -23,9 +23,7 @@ on Termux
 ### Crates
 
 ```shell
-cargo install wasm-bindgen-cli
-cargo install cargo-make
-cargo install basic-http-server
+cargo install wasm-bindgen-cli cargo-make basic-http-server
 ```
 
 ## Run
