@@ -10,12 +10,12 @@ dependencies = ["build"]
 [tasks.web]
 dependencies = ["wasm-bindgen"]
 
-[tasks.run]
+[tasks.test]
 command = "basic-http-server"
 args = ["-x"]
 dependencies = ["web"]
 
-[tasks.public]
+[tasks.run]
 script = "basic-http-server -x -a `ip a s dev eth0 | grep -oP 'inet\\s+\\K[^/]+'`:4000"
 dependencies = ["web"]
 
