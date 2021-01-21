@@ -15,3 +15,7 @@ command = "basic-http-server"
 args = ["-x"]
 dependencies = ["web"]
 
+[tasks.public]
+script = "basic-http-server -x -a `ip a s dev eth0 | grep -oP 'inet\\s+\\K[^/]+'`:4000"
+dependencies = ["web"]
+
