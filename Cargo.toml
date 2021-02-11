@@ -16,3 +16,6 @@ default = [
 bevy = {version="0.4", default-features=false}
 bevy_webgl2 = "0.4.2"
 
+[profile.release]
+opt-level = "s"
+
