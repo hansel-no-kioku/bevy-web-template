@@ -20,16 +20,26 @@ pkg install rust rust-std-wasm32
 
 on Termux
 
-### Crates
+### Install crates
 
 ```shell
-cargo install wasm-bindgen-cli cargo-make basic-http-server
+cargo install wasm-bindgen-cli cargo-generate cargo-make basic-http-server
+```
+
+## Create a project
+
+```shell
+cargo generate --git https://github.com/hansel-no-kioku/bevy-web-template.git --name my-project
 ```
 
 ## Run
 
 ```shell
-cargo make run
+cd my-project
+cargo make test
 ```
 
 and open http://127.0.0.1:4000 in browser
+
+Publish on port 4000 with `cargo make run` (Linux only)
+
